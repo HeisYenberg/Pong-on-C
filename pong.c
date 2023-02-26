@@ -15,26 +15,12 @@ void player_two_scored(int *top_rocket_one, int *mid_rocket_one, int *bottom_roc
                        int *y_ball);
 void change_dir(int top_rocket_one, int mid_rocket_one, int bottom_rocket_one, int top_rocket_two,
                 int mid_rocket_two, int bottom_rocket_two, int *x_ball, int *y_ball, char *move_ball);
-void game(int top_rocket_one, int mid_rocket_one, int bottom_rocket_one, int top_rocket_two,
-          int mid_rocket_two, int bottom_rocket_two, int x_ball, int y_ball, int player_one_score,
-          int player_two_score, char move_ball);
+void game();
 
 int main() {
-    int x_ball = 2;
-    int y_ball = 13;
-    char move_ball = 'a';
-    int top_rocket_one = 12;
-    int mid_rocket_one = 13;
-    int bottom_rocket_one = 14;
-    int top_rocket_two = 12;
-    int mid_rocket_two = 13;
-    int bottom_rocket_two = 14;
-    int player_one_score = 0;
-    int player_two_score = 0;
     initscr();
     clear();
-    game(top_rocket_one, mid_rocket_one, bottom_rocket_one, top_rocket_two, mid_rocket_two, bottom_rocket_two,
-         x_ball, y_ball, player_one_score, player_two_score, move_ball);
+    game();
     return 0;
 }
 
@@ -198,9 +184,18 @@ void change_dir(int top_rocket_one, int mid_rocket_one, int bottom_rocket_one, i
     }
 }
 
-void game(int top_rocket_one, int mid_rocket_one, int bottom_rocket_one, int top_rocket_two,
-          int mid_rocket_two, int bottom_rocket_two, int x_ball, int y_ball, int player_one_score,
-          int player_two_score, char move_ball) {
+void game() {
+    int x_ball = 2;
+    int y_ball = 13;
+    char move_ball = 'a';
+    int top_rocket_one = 12;
+    int mid_rocket_one = 13;
+    int bottom_rocket_one = 14;
+    int top_rocket_two = 12;
+    int mid_rocket_two = 13;
+    int bottom_rocket_two = 14;
+    int player_one_score = 0;
+    int player_two_score = 0;
     while (player_one_score != 21 && player_two_score != 21) {
         nodelay(stdscr, TRUE);
         refresh();
