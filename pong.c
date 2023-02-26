@@ -160,15 +160,13 @@ void change_dir(int top_rocket_one, int mid_rocket_one, int bottom_rocket_one, i
                 *move_ball = 'c';
             }
         }
-    }
-    if (*y_ball == 1) {
+    } else if (*y_ball == 1) {
         if (*move_ball == 'c') {
             *move_ball = 'd';
         } else if (*move_ball == 'a') {
             *move_ball = 'b';
         }
-    }
-    if (*y_ball == 24) {
+    } else if (*y_ball == 24) {
         if (*move_ball == 'd') {
             *move_ball = 'c';
         } else if (*move_ball == 'b') {
@@ -178,16 +176,13 @@ void change_dir(int top_rocket_one, int mid_rocket_one, int bottom_rocket_one, i
     if ('a' == *move_ball) {
         *x_ball += 1;
         *y_ball -= 1;
-    }
-    if ('b' == *move_ball) {
+    } else if ('b' == *move_ball) {
         *x_ball += 1;
         *y_ball += 1;
-    }
-    if ('c' == *move_ball) {
+    } else if ('c' == *move_ball) {
         *x_ball -= 1;
         *y_ball -= 1;
-    }
-    if ('d' == *move_ball) {
+    } else if ('d' == *move_ball) {
         *x_ball -= 1;
         *y_ball += 1;
     }
