@@ -145,7 +145,7 @@ void player_two_scored(int *top_rocket_one, int *mid_rocket_one, int *bottom_roc
 void change_dir(int top_rocket_one, int mid_rocket_one, int bottom_rocket_one, int top_rocket_two,
                 int mid_rocket_two, int bottom_rocket_two, int *x_ball, int *y_ball, char *move_ball) {
     if (*x_ball == 2) {
-        if (*y_ball == top_rocket_one || *y_ball == mid_rocket_one || *y_ball == bottom_rocket_two) {
+        if (*y_ball == top_rocket_one || *y_ball == mid_rocket_one || *y_ball == bottom_rocket_one) {
             if (*move_ball == 'c') {
                 *move_ball = 'a';
             } else if (*move_ball == 'd') {
